@@ -163,7 +163,7 @@ function draw() {
 
 	x += dx;
 	y += dy;
-
+	requestAnimationFrame(draw);
 }
 
 document.addEventListener("mousemove",mouseMoveHandler);
@@ -175,4 +175,6 @@ var relativeX = e.clientX - canvas.offsetLeft;
                 }
 }
 
-setInterval(draw, 10);
+//setInterval(draw, 10);
+
+draw();
